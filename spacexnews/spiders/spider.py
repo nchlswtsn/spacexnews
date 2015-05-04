@@ -10,7 +10,6 @@ class MySpider(BaseSpider):
 	start_urls = ["http://www.spacex.com/missions"]
 
 	def parse(self, response):
-		hxs = HtmlXPathSelector(response)
 		manifest = response.xpath('//div[@class="view-content"][2]/table[@class="views-table cols-4"]/tbody/tr')
 		items = []
 
